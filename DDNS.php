@@ -20,8 +20,8 @@ function send_post($url,$headers,$post_data) {
     return $result;
 }
 
-$token = "YourTokenId,YourToken";  //填入token信息
-$command = "nslookup Yourdomain";  //填入域名
+$token = "YourTokenId,YourToken";  //填入DNSPod提供的token信息
+$command = "nslookup Yourdomain";  //填入您的域名
 exec($command,$output);
 $ip = str_replace(PHP_EOL, '', file_get_contents("http://ip.cip.cc"));
 $dnsdata = explode(": ",$output[5],2)[1];
