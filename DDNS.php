@@ -33,19 +33,7 @@ if (!empty($ip) && ($ip != $dnsdata) && (!empty($dnsdata))) {
 }
 if (is_array($dnsdata)) {
     echo 'Success flush the dns to '.$ip;
-    $log_file = fopen("ip_log.txt", "a") or die("Unable to open file!");
-    $fp = file("ip_log.txt");
-    $txt = "$ip\n";
-    if (strcmp("$ip\n",$fp[count($fp)-1]))
-        fwrite($log_file, $txt);
-    fclose($log_file);
 } else {
     echo 'No need in '.$ip;
-    $log_file = fopen("ip_log.txt", "a") or die("Unable to open file!");
-    $fp = file("ip_log.txt");
-    $txt = "$ip\n";
-    if (strcmp("$ip\n",$fp[count($fp)-1]))
-        fwrite($log_file, $txt);
-    fclose($log_file);
 }
 ?>
